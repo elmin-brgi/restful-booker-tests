@@ -20,10 +20,10 @@ Basic functionality executed first to check if the API is working:
   Retrieves the created booking  
   Expected: 200 OK + correct data
 
-- PUT /id 
+- PUT /id  
   Updates booking with specified id
 
-- DELETE /id
+- DELETE /id  
   Deletes booking with specified id
 
 ## 2. Positive Test Cases
@@ -50,18 +50,20 @@ Basic functionality executed first to check if the API is working:
    Filter bookings by first and last name
 
 ## 3. Negative Test Cases
+1. Try to obtain token with bad credentials  
+   Expected: 200 OK Bad Credentials
 
-1. Create a booking with missing required fields  
+2. Create a booking with missing required fields  
    Expected: 400 Bad Request
 
-2. Create a booking with invalid data types (e.g., price = string)  
+3. Create a booking with invalid data types (e.g., price = string)  
    Expected: 400 Bad Request
 
-3. Retrieve a booking with a non-existing ID  
+4. Retrieve a booking with a non-existing ID  
    Expected: 404 Not Found
 
-4. Send an invalid JSON payload  
+5. Send an invalid JSON payload  
    Expected: 400 Bad Request
 
-5. Ussage of an incorrect token  
+6. Ussage of an incorrect token  
    Expected: 403 Forbidden or 401 Unauthorized
